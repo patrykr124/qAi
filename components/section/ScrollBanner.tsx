@@ -58,7 +58,7 @@ export default function ScrollBanner() {
                     <h2>Co łączy wszystkie<br/> wyżej wymienione platformy?
                     </h2>
                     <p>Wszystkie opisane platformy łączy wykorzystanie zaawansowanych technologii, w tym sztucznej inteligencji, do rozwiązywania złożonych problemów w różnych branżach, takich jak medycyna, edukacja, diagnostyka, czy protetyka. Stawiają one na innowacyjność, dostępność i wspieranie użytkowników poprzez dostarczanie narzędzi dostosowanych do ich specyficznych potrzeb. Każda z tych firm działa w duchu transformacji technologicznej, kładąc nacisk na poprawę jakości życia, zwiększanie efektywności procesów oraz bezpieczeństwo danych klientów</p>
-                    <Button text={"Zadźwoń"} white />
+                   
                 </div>
                 <div className="">
                     <div className="flex gap-2 scroll-image justify-center ">

@@ -53,11 +53,12 @@ export default function NavBar() {
     useGSAP(() => {
         gsap.from(".nav", {
             y: -100,
-           }
+        }
         )
         gsap.to(".nav", {
             y: 0,
-            duration: 0.8}
+            duration: 0.8
+        }
         )
     },)
 
@@ -69,17 +70,18 @@ export default function NavBar() {
                     <div className="flex items-center gap-8">
                         <div className="logo flex items-center">
                             <Image src="/assets/img/logo4.svg" alt="logo" width={120} height={120} />
-                            {/* <h1 className="text-4xl font-medium">qAI</h1> */}
-                        </div>
-                        <div className="items_Left">
-                            <ul className="flex gap-8 text-xl  ">
-                                <Link href="/">What we do</Link>
-                                <Link href="/">Project</Link>
-                            </ul>
+
                         </div>
                     </div>
-                    <div className="items_right mt-1.5">
-                        <Button className="">Contact</Button>
+                    <div className="items_Left">
+                        <ul className="flex  gap-12 text-md  ">
+                            <Link href="/">What we do</Link>
+                            <Link href="/">multiagentAI</Link>
+                            <Link href="/">NeuralHub</Link>
+                        </ul>
+                    </div>
+                    <div className="items_right flex justify-center items-center ">
+                        <Button />
                     </div>
                 </div>
             </div>

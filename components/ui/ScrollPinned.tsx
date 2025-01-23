@@ -2,7 +2,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Dots from "./Dots";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,12 +38,12 @@ const slides = [
         title: 'Vbionic',
         description: 'Vbionic to firma biomedyczna specjalizująca się w projektowaniu i produkcji nowoczesnych protez kończyn górnych i dolnych, takich jak bioniczne protezy ręki TOLKA PRO oraz kosmetyczne uzupełnienia dłoni i stóp.\n\nDzięki zastosowaniu zaawansowanych technologii i indywidualnemu podejściu, Vbionic oferuje funkcjonalne i estetyczne rozwiązania protetyczne, które poprawiają jakość życia użytkowników.',
     },
-    
-   
+
+
 ]
 
 export default function ScrollPinned() {
-
+    const [active, setActive] = useState(0);
     const galleryRef = useRef<HTMLDivElement>(null);
 
 
@@ -50,6 +51,7 @@ export default function ScrollPinned() {
         const ctx = gsap.context(() => {
             const photos = document.querySelectorAll('.photo');
             const contentBlocks = document.querySelectorAll('.content-block');
+            const dots = document.querySelectorAll('.dots');
             const photoDuration = 0.5;
             // Create animation for photos
             gsap.set(photos, { opacity: 0 });
@@ -62,24 +64,31 @@ export default function ScrollPinned() {
                     start: "top center", // Trigger when the top of the image reaches the center of the viewport
                     end: "bottom center", // End when the bottom of the image leaves the center of the viewport
                     onEnter: () => {
+
+                        setActive(index);
                         // Fade in the current photo and text
                         gsap.to(photo, { opacity: 1, duration: `${photoDuration}` });
                         gsap.to(contentBlocks[index], { opacity: 1, y: 0, duration: 0.5 });
+                        gsap.to(dots, { opacity: 1, duration: `${photoDuration}` })
                     },
                     onLeave: () => {
                         // Fade out the current photo and text when scrolling away
                         gsap.to(photo, { opacity: 0, duration: `${photoDuration}` });
                         gsap.to(contentBlocks[index], { opacity: 0, y: 20, duration: 0.5 });
+                        gsap.to(dots, { opacity: 0, duration: `${photoDuration}` })
                     },
                     onEnterBack: () => {
+                        setActive(index);
                         // Handle re-entering the slide from the bottom
                         gsap.to(photo, { opacity: 1, duration: `${photoDuration}` });
                         gsap.to(contentBlocks[index], { opacity: 1, y: 0, duration: 0.5 });
+                        gsap.to(dots, { opacity: 1, duration: `${photoDuration}` })
                     },
                     onLeaveBack: () => {
                         // Handle leaving the slide from the top
                         gsap.to(photo, { opacity: 0, duration: `${photoDuration}` });
                         gsap.to(contentBlocks[index], { opacity: 0, y: 20, duration: 0.5 });
+                        gsap.to(dots, { opacity: 0, duration: `${photoDuration}` })
                     },
                 });
             });
@@ -88,47 +97,61 @@ export default function ScrollPinned() {
         return () => ctx.revert()
     }, [])
 
+    function scrollToSlide(index: number) {
+        const slideElements = document.getElementById(`${index}`);
+        if (slideElements) {
+            slideElements.scrollIntoView({ behavior: 'smooth' });
+            setActive(index);
+        }
+    }
+
+
+
     return (
         <section ref={galleryRef} className="min-h-screen -mt-[85vh]  ">
-          
-                <div className="gallery flex ">
-                    {/* Left scrolling section */}
-                    <div className="left w-1/2 ml-auto">
+            <div className="gallery flex ">
+                {/* Left scrolling section */}
+                <div className="left w-1/2 ml-auto">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            id={`${index}`}
+                            className="photo-container h-screen flex items-center justify-end p-8"
+                        >
+                            <div className="relative overflow-hidden rounded-lg w-[700px] h-[500px] ">
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    fill
+                                    className="photo object-cover rounded-lg"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority={index === 0}
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Right pinned section */}
+                <div className="rightblock w-1/2 h-screen sticky top-0">
+                    <div className="h-full relative flex items-center justify-start p-8">
                         {slides.map((slide, index) => (
                             <div
                                 key={index}
-                                className="photo-container h-screen flex items-center justify-end p-8"
+                                className={`content-block absolute max-w-2xl space-y-6`}
                             >
-                                <div className="relative overflow-hidden rounded-lg w-[700px] h-[500px] ">
-                                    <Image
-                                        src={slide.image}
-                                        alt={slide.title}
-                                        fill
-                                        className="photo object-cover rounded-lg z-[99]"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        priority={index === 0}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                                <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
+                                <p className="text-lg text-gray-300 whitespace-pre-line">{slide.description}</p>
 
-                    {/* Right pinned section */}
-                    <div className="rightblock w-1/2 h-screen sticky top-0">
-                        <div className="h-full flex items-center justify-start p-8">
-                            {slides.map((slide, index) => (
-                                <div
-                                    key={index}
-                                    className={`content-block absolute max-w-2xl space-y-6`}
-                                >
-                                    <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
-                                    <p className="text-lg text-gray-300 whitespace-pre-line">{slide.description}</p>
-                                </div>
-                            ))}
-                        </div>
+                            </div>
+
+                        ))}
+                        <Dots active={active} scrollToSlide={scrollToSlide} slides={slides} />
                     </div>
                 </div>
-          
+            </div>
+
+
         </section>
     )
 }

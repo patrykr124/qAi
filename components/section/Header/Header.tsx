@@ -32,7 +32,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="z-20 absolute bottom-10 translate-x-[50%] left-[50%] ">
-                    <ScrollButton />
+                    {/* <ScrollButton /> */}
                 </div>
         
         </div>

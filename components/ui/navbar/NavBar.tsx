@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Button from "../Button";
 gsap.registerPlugin(ScrollTrigger);
 export default function NavBar() {
     const [visible, setVisible] = useState(true);
@@ -78,7 +79,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="items_right mt-1.5">
-                        {/* <button className="btn">Contact</button> */}
+                        <Button className="">Contact</Button>
                     </div>
                 </div>
             </div>

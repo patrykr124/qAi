@@ -67,10 +67,10 @@ export default function WhatWeDo() {
             <div className="wrapper">
                 <div className="grid md:grid-cols-3 md:gap-10 pt-52">
                     <div className="col-span-2 box opacity-0">
-                        <WhatWeDoBox typingText={contentData[0].typingText} video="video1.mp4" titleClass="top-20 left-4"  title="Multiagent AI" classShadow="bg-gradient-to-tr from-black from-15%  via-transparent via-60%" />
+                        <WhatWeDoBox typingText={contentData[0].typingText} video="multiagentai.mp4" titleClass="top-20 left-4"  title="Multiagent AI" classShadow="bg-gradient-to-tr from-black from-15%  via-transparent via-60%" />
                     </div>
                     <div className="col-span-1 box opacity-0">
-                        <WhatWeDoBox typingText={contentData[1].typingText} video="video2.mp4" titleClass="top-4 left-2" title="Technologia GPU" classShadow="bg-gradient-to-br from-black from-15%  via-transparent via-60%" />
+                        <WhatWeDoBox typingText={contentData[1].typingText} video="gpu.mov" titleClass="top-4 left-2" title="Technologia GPU" classShadow="bg-gradient-to-br from-black from-15%  via-transparent via-60%" />
                     </div>
                 </div>
 
@@ -78,10 +78,10 @@ export default function WhatWeDo() {
                 <div className="grid md:grid-cols-3 md:gap-10 md:pt-10 ">
 
                     <div className="col-span-1 box opacity-0">
-                        <WhatWeDoBox typingText={contentData[2].typingText} video="video3.mp4" titleClass="top-20 left-4" title="Multiagent AI" classShadow="bg-gradient-to-tr from-black from-15%  via-transparent via-60%" />
+                        <WhatWeDoBox typingText={contentData[2].typingText} video="video3.mp4" titleClass="top-20 left-4" title="On-premise" classShadow="bg-gradient-to-tr from-black from-15%  via-transparent via-60%" />
                     </div>
                     <div className="col-span-2 box opacity-0">
-                        <WhatWeDoBox typingText={contentData[3].typingText} video="video4.mp4" titleClass="top-4 left-2 w-3/4" title="Rozwiązania On Preme" classShadow="bg-gradient-to-br from-black from-15%  via-transparent via-60%" />
+                        <WhatWeDoBox typingText={contentData[3].typingText} video="neuralhub.mov" titleClass="top-4 left-2 w-3/4" title="Neural Hub" classShadow="bg-gradient-to-br from-black from-15%  via-transparent via-60%" />
                     </div>
 
                 </div>

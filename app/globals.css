@@ -21,7 +21,7 @@ html{
 body {
   color: white;
   background: black;
-  font-family: Chivo Mono, Helvetica, sans-serif;
+  font-family: Righteous, Helvetica, sans-serif;
   overflow-x:hidden;
   font-weight: 200;
 }
@@ -39,10 +39,10 @@ body {
   }
 
 
-  .btn{
+  /* .btn{
     @apply text-xl bg-white text-black px-6 py-1 rounded-lg font-medium
   }
-  
+   */
   h2{
     @apply text-4xl font-bold text-white
   }

@@ -11,38 +11,50 @@ const slides = [
     {
         image: '/assets/img/gpu.png',
         title: 'GPU',
-        description: 'Flexible and scalable computing platforms, available on demand. They enable rapid deployment of AI projects, optimizing data processing, model training and implementation.\n\nSupporting diverse operating environments and integration with popular tools, they provide the foundation for innovative solutions in data analysis, process automation and advanced machine learning.\n\nAs a result, organizations can efficiently implement compute-intensive projects and maintain control over performance.',
+        description: 'GPU Clouds are scalable computing platforms that offer on-demand resources for advanced data processing.\n\nThey streamline AI projects, enabling rapid training of models and deployment of solutions without the need to invest in costly infrastructure.\n\nBy integrating with popular tools, they provide efficiency and flexibility, allowing organizations to optimize processes and accelerate technology projects.',
     },
     {
-        image: '/assets/img/automation1.png',
-        title: 'Automations',
-        description: 'MLnative to kompleksowa platforma AI wspierająca automatyzację procesów w biznesie poprzez trzy główne rozwiązania: CVtoblind\n\n- narzędzie do anonimizacji dokumentów rekrutacyjnych, Ship Spec Reader\n\n- system ekstrakcji specyfikacji technicznych, oraz MLOps Framework\n\n- narzędzie do zarządzania cyklem życia modeli AI. Platforma pozwala firmom zwiększyć efektywność operacyjną, oszczędzając czas i zasoby przy zachowaniu wysokiej jakości wyników.',
+        image: '/assets/img/cv.svg',
+        title: 'CV to Blind',
+        description:"Artificial intelligence-based recruitment platforms eliminate biases during the selection process by hiding personal information about candidates, such as gender, age or background.\n\nThe solution promotes transparency and equality by focusing solely on competencies and experience.\n\nAutomating the analysis of resumes speeds up recruitment, reducing costs and minimizing the risk of subjective evaluations. This cutting-edge tool improves the quality of decisions and supports building diverse teams.",
     },
     {
         image: '/assets/img/medicine.png',
         title: 'Ai in medicine',
-        description: 'TheLion.AI to interdyscyplinarna platforma rozwijająca otwartoźródłowe rozwiązania AI dla medycyny, takie jak Eskulap\n\n- pierwszy polski medyczny model językowy, UMIE\n\n- uniwersalny enkoder obrazów diagnostycznych, oraz MIDAS\n\n- narzędzie do zarządzania zestawami danych medycznych.\n\nProjekty wspierają diagnostykę i badania medyczne, przyspieszając procesy analizy danych i promując dostępność zaawansowanych technologii w medycynie.',
+        description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
     },
+    {
+        image: '/assets/img/automation1.png',
+        title: 'Automations',
+        description: 'Process automation platforms use artificial intelligence to analyze data, speeding up and simplifying everyday business tasks.\n\nIn the areas of recruitment, logistics or marketing, these solutions reduce operational costs and eliminate repetitive activities.\n\nThanks to advanced algorithms, users are provided with tools to make accurate predictions, streamline decisions and optimize operational processes.',
+    },
+    
     {
         image: '/assets/img/4.png',
         title: 'Transcription Ai',
-        description: 'Stenograf.io to inteligentne narzędzie wspierające transkrypcję oraz analizę danych audio i wideo.\n\nDzięki zaawansowanym algorytmom AI, platforma umożliwia szybkie i precyzyjne przekształcanie treści mówionej na tekst.\n\nDodatkowe funkcje obejmują rozpoznawanie mówców, indeksowanie treści oraz możliwość przetwarzania danych w wielu językach.\n\nStenograf.io dedykowany jest dziennikarzom, prawnikom i firmom, które chcą zoptymalizować procesy przetwarzania informacji.',
+        description: 'Intelligent transcription tools enable fast and accurate conversion of speech into text.\n\nThey support legal, education and media in record analysis processes, facilitating documentation and access to information.\n\nBy automating transcription, costs and time consumption are reduced, allowing organizations to manage data and complete key tasks more efficiently.',
     },
     {
         image: '/assets/img/brain.png',
         title: 'Brain scan',
-        description: 'BrainScan.AI to zaawansowana platforma wykorzystująca sztuczną inteligencję w analizie danych neurologicznych. \n\nNarzędzie wspiera lekarzy, naukowców i kliniki w diagnozowaniu schorzeń neurologicznych, takich jak choroba Alzheimera czy depresja, poprzez analizę obrazów mózgu i predykcję ryzyka zachorowań.\n\nBrainScan.AI oferuje również funkcje monitorowania pacjentów oraz personalizację terapii, co czyni ją niezastąpionym narzędziem w nowoczesnej medycynie.',
+        description: 'AI solutions for medical diagnostics improve the analysis of imaging data, speeding up the process of detecting neurological conditions and other disorders.\n\nAdvanced algorithms that learn from large data sets improve the accuracy of diagnoses and support the work of doctors.\n\nWith automation and precision, these platforms enable faster decision-making and better patient care.',
     },
     {
         image: '/assets/img/6.png',
         title: 'Innovative prostheses',
-        description: 'Vbionic to firma biomedyczna specjalizująca się w projektowaniu i produkcji nowoczesnych protez kończyn górnych i dolnych, takich jak bioniczne protezy ręki TOLKA PRO oraz kosmetyczne uzupełnienia dłoni i stóp.\n\nDzięki zastosowaniu zaawansowanych technologii i indywidualnemu podejściu, Vbionic oferuje funkcjonalne i estetyczne rozwiązania protetyczne, które poprawiają jakość życia użytkowników.',
+        description: 'Mobility and rehabilitation support technologies use advanced AI solutions to design medical devices such as prostheses and exoskeletons.\n\nThey offer a modern approach to improving patients quality of life, enabling them to be more independent and better able to adapt to daily challenges.\n\nInnovative systems support the rehabilitation process, combining personalization with efficiency.',
     },
     {
         image: '/assets/img/ivr.png',
         title: 'IVR Voice Assistant',
         description:"Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
-    }
+    },
+    {
+        image: '/assets/img/reader.svg',
+        title: 'Ship Spec Reader',
+        description:"Automatic technical specification reading systems streamline document analysis in logistics and maritime industries.\n\nUsing artificial intelligence, they speed up data processing, eliminating human error and reducing time-consuming manual processes.\n\nThe solution integrates with existing systems, providing precise extraction of key information and supporting optimization of document management. This allows for more effective decision-making and improved operational efficiency.",
+    },
+    
 
 
 ]

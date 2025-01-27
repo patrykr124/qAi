@@ -1,8 +1,13 @@
+import Link from "next/link"
 
-export default function Button() {
+interface Props {
+  children: React.ReactNode,
+  href: string 
+}
+export default function Button({children,href} :Props ){
   return (
     <>
-      <button className="btn">Contact us</button>
+      <Link href={href} className="btn">{children}</Link>
     </>
   )
 }

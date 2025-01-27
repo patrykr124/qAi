@@ -15,28 +15,30 @@ export default function NavBar() {
 
 
     useEffect(() => {
-        const handleNavScroll = () => {
-            const currenScrollY = window.scrollY;
-            if (navWrappRef.current) {
-                if (currenScrollY === 0) {
-                    setVisible(true);
-                    navWrappRef.current.classList.remove("floating-nav");
-                } else if (currenScrollY > lastScroll) {
-                    setVisible(false);
-                } else if (currenScrollY < lastScroll) {
-                    navWrappRef.current.classList.add("floating-nav");
-                    setVisible(true);
+        if (typeof window !== "undefined") {
+            const handleNavScroll = () => {
+                const currenScrollY = window.scrollY;
+                if (navWrappRef.current) {
+                    if (currenScrollY === 0) {
+                        setVisible(true);
+                        navWrappRef.current.classList.remove("floating-nav");
+                    } else if (currenScrollY > lastScroll) {
+                        setVisible(false);
+                    } else if (currenScrollY < lastScroll) {
+                        navWrappRef.current.classList.add("floating-nav");
+                        setVisible(true);
 
 
+                    }
+                    setLastScroll(currenScrollY);
                 }
-                setLastScroll(currenScrollY);
             }
-        }
 
-        window.addEventListener("scroll", handleNavScroll);
+            window.addEventListener("scroll", handleNavScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleNavScroll)
+            return () => {
+                window.removeEventListener("scroll", handleNavScroll)
+            }
         }
 
 
@@ -44,23 +46,26 @@ export default function NavBar() {
 
 
     useGSAP(() => {
-        gsap.to(navRef.current, {
-            y: visible ? 0 : -100,
-            duration: 0.4
-        })
-    }, [visible])
-
+        if (typeof window !== "undefined") {
+            gsap.to(navRef.current, {
+                y: visible ? 0 : -100,
+                duration: 0.4,
+            });
+            
+        }
+    }, [visible]);
+    
     useGSAP(() => {
-        gsap.from(".nav", {
-            y: -100,
+        if (typeof window !== "undefined") {
+            gsap.from(".nav", {
+                y: -100,
+            });
+            gsap.to(".nav", {
+                y: 0,
+                duration: 0.8,
+            });
         }
-        )
-        gsap.to(".nav", {
-            y: 0,
-            duration: 0.8
-        }
-        )
-    },)
+    }, []);
 
 
     return (
@@ -74,14 +79,20 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="items_Left">
-                        <ul className="flex  gap-12 text-md  ">
-                            <Link href="/">What we do</Link>
-                            <Link href="/">multiagentAI</Link>
-                            <Link href="/">NeuralHub</Link>
+                        <ul className="flex  gap-6 text-md  ">
+                            <li>
+                                <Button href="/">What we do</Button>
+                            </li>
+                            <li>
+                                <Button href="/">multiagentAI</Button>
+                            </li>
+                            <li>
+                                <Button href="/">NeuralHub</Button>
+                            </li>
                         </ul>
                     </div>
                     <div className="items_right flex justify-center items-center ">
-                        <Button />
+                        <Button href={"/contact"}>Contact us</Button>
                     </div>
                 </div>
             </div>

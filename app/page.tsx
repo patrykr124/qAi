@@ -1,4 +1,4 @@
-'use client'
+
 import PercelBox from "@/components/section/PercelBox";
 import ScrollBanner from "@/components/section/ScrollBanner";
 import WhatWeDo from "@/components/section/WhatWeDo";
@@ -15,12 +15,10 @@ export default function Home() {
       <Pinned/>
       <BackgroundGradientAnimation />
       <WhatWeDo />
-      {/* <Text/> */}
       <BackgroundGradientAnimation_text />
       <ScrollPinned />
       <ScrollBanner/>
       <PercelBox/>
-      <div className="h-screen"></div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-
+'use client'
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function Pinned() {
 
     const [currentHash, setCurrentHash] = useState("");
-    console.log(currentHash)
+ 
     useEffect(() => {
         const sections = [
           { id: "home", ref: document.getElementById("home") },

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Chivo_Mono } from "next/font/google";
+import { Righteous } from "next/font/google";
 import "./globals.css";
 
-const azeret = Chivo_Mono({
+const righteous = Righteous({
   variable: "--font-formula",
   subsets: ["latin"],
+  weight: ["400"]
 });
 
 
@@ -18,10 +19,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <html  lang="en">
+    <html lang="en">
       <body
-        className={`${azeret.variable} antialiased`}
+        className={`${righteous.variable} antialiased`}
       >
         {children}
       </body>

@@ -20,10 +20,13 @@ export default function Header() {
                     <div className="">
                         <h1 className="text pointer-events-none absolute top-[50%] translate-x-[0%] translate-y-[-50%] z-20  leading-normal">
                             <div className="overflow-hidden">
-                                <p className="word text-8xl text-white">WE</p> <br />
+                                <p className="word text-7xl text-white">WE</p> <br />
                             </div>
                             <div className="overflow-hidden">
                                 <p className="word text-8xl text-white">BUILD</p> <br />
+                            </div>
+                            <div className="overflow-hidden">
+                                <p className="word text-9xl text-white">THE</p> <br />
                             </div>
                             <div className="overflow-hidden">
                                 <p className="word my-16 text-[10rem] font-medium text-white">FUTURE</p>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PercelBox() {
     return (
-        <div className="pt-52">
+        <div id="faq" className="pt-52">
             <div className="wrapper flex">
                 <div className="right w-1/2 flex flex-col justify-center ">
                     <div className=" flex flex-col gap-0">

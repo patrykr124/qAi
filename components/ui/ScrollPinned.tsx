@@ -9,35 +9,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 const slides = [
     {
-        image: '/assets/img/1.png',
-        title: 'GPU Cloud',
-        description: 'GPU Cloud to platforma oferująca zasoby obliczeniowe GPU na żądanie, umożliwiająca szybkie uruchamianie infrastruktury do projektów AI.\n\nDzięki integracji z popularnymi narzędziami, jak Jupyter Lab czy Visual Studio Code, użytkownicy mogą efektywnie zarządzać procesami zbierania danych, trenowania modeli oraz ich wdrażania.\n\nPlatforma wspiera różnorodne frameworki, takie jak TensorFlow, PyTorch czy ONNX, zapewniając elastyczność w realizacji projektów.',
+        image: '/assets/img/gpu.png',
+        title: 'GPU',
+        description: 'Flexible and scalable computing platforms, available on demand. They enable rapid deployment of AI projects, optimizing data processing, model training and implementation.\n\nSupporting diverse operating environments and integration with popular tools, they provide the foundation for innovative solutions in data analysis, process automation and advanced machine learning.\n\nAs a result, organizations can efficiently implement compute-intensive projects and maintain control over performance.',
     },
     {
-        image: '/assets/img/2.png',
-        title: 'MLnative',
+        image: '/assets/img/automation1.png',
+        title: 'Automations',
         description: 'MLnative to kompleksowa platforma AI wspierająca automatyzację procesów w biznesie poprzez trzy główne rozwiązania: CVtoblind\n\n- narzędzie do anonimizacji dokumentów rekrutacyjnych, Ship Spec Reader\n\n- system ekstrakcji specyfikacji technicznych, oraz MLOps Framework\n\n- narzędzie do zarządzania cyklem życia modeli AI. Platforma pozwala firmom zwiększyć efektywność operacyjną, oszczędzając czas i zasoby przy zachowaniu wysokiej jakości wyników.',
     },
     {
-        image: '/assets/img/3.png',
-        title: 'TheLion.AI',
+        image: '/assets/img/medicine.png',
+        title: 'Ai in medicine',
         description: 'TheLion.AI to interdyscyplinarna platforma rozwijająca otwartoźródłowe rozwiązania AI dla medycyny, takie jak Eskulap\n\n- pierwszy polski medyczny model językowy, UMIE\n\n- uniwersalny enkoder obrazów diagnostycznych, oraz MIDAS\n\n- narzędzie do zarządzania zestawami danych medycznych.\n\nProjekty wspierają diagnostykę i badania medyczne, przyspieszając procesy analizy danych i promując dostępność zaawansowanych technologii w medycynie.',
     },
     {
         image: '/assets/img/4.png',
-        title: 'Stenograf.io',
+        title: 'Transcription Ai',
         description: 'Stenograf.io to inteligentne narzędzie wspierające transkrypcję oraz analizę danych audio i wideo.\n\nDzięki zaawansowanym algorytmom AI, platforma umożliwia szybkie i precyzyjne przekształcanie treści mówionej na tekst.\n\nDodatkowe funkcje obejmują rozpoznawanie mówców, indeksowanie treści oraz możliwość przetwarzania danych w wielu językach.\n\nStenograf.io dedykowany jest dziennikarzom, prawnikom i firmom, które chcą zoptymalizować procesy przetwarzania informacji.',
     },
     {
-        image: '/assets/img/5.png',
-        title: 'BrainScan.AI',
+        image: '/assets/img/brain.png',
+        title: 'Brain scan',
         description: 'BrainScan.AI to zaawansowana platforma wykorzystująca sztuczną inteligencję w analizie danych neurologicznych. \n\nNarzędzie wspiera lekarzy, naukowców i kliniki w diagnozowaniu schorzeń neurologicznych, takich jak choroba Alzheimera czy depresja, poprzez analizę obrazów mózgu i predykcję ryzyka zachorowań.\n\nBrainScan.AI oferuje również funkcje monitorowania pacjentów oraz personalizację terapii, co czyni ją niezastąpionym narzędziem w nowoczesnej medycynie.',
     },
     {
         image: '/assets/img/6.png',
-        title: 'Vbionic',
+        title: 'Innovative prostheses',
         description: 'Vbionic to firma biomedyczna specjalizująca się w projektowaniu i produkcji nowoczesnych protez kończyn górnych i dolnych, takich jak bioniczne protezy ręki TOLKA PRO oraz kosmetyczne uzupełnienia dłoni i stóp.\n\nDzięki zastosowaniu zaawansowanych technologii i indywidualnemu podejściu, Vbionic oferuje funkcjonalne i estetyczne rozwiązania protetyczne, które poprawiają jakość życia użytkowników.',
     },
+    {
+        image: '/assets/img/ivr.png',
+        title: 'IVR Voice Assistant',
+        description:"Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
+    }
 
 
 ]
@@ -108,8 +113,8 @@ export default function ScrollPinned() {
 
 
     return (
-        <section ref={galleryRef} className="min-h-screen -mt-[85vh]  ">
-            <div className="gallery flex ">
+        <section id="scrollPinned"  ref={galleryRef} className="min-h-screen -mt-[85vh]  ">
+            <div  className="gallery flex ">
                 {/* Left scrolling section */}
                 <div className="left w-1/2 ml-auto">
                     {slides.map((slide, index) => (

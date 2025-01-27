@@ -86,7 +86,7 @@ export const BackgroundGradientAnimation = ({
 
 
     return (
-        <div style={localStyle}
+        <div id="home" style={localStyle}
             className={cn(
                 "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(320deg,var(--gradient-background-start),var(--gradient-background-end)_90%)]",
                 containerClassName

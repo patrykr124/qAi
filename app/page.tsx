@@ -7,18 +7,21 @@ import { BackgroundGradientAnimation_text } from "@/components/ui/background-gra
 import NavBar from "@/components/ui/navbar/NavBar";
 import Pinned from "@/components/ui/Pinned";
 import ScrollPinned from "@/components/ui/ScrollPinned";
+import { MenuProvider } from "@/context/MenuContext";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <NavBar />
-      <Pinned/>
-      <BackgroundGradientAnimation />
-      <WhatWeDo />
-      <BackgroundGradientAnimation_text />
-      <ScrollPinned />
-      <ScrollBanner/>
-      <PercelBox/>
-    </div>
+    <MenuProvider>
+      <div className="relative">
+        <NavBar />
+        <Pinned />
+        <BackgroundGradientAnimation />
+        <WhatWeDo />
+        <BackgroundGradientAnimation_text />
+        <ScrollPinned />
+        <ScrollBanner />
+        <PercelBox />
+      </div>
+    </MenuProvider>
   );
 }

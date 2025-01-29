@@ -2,12 +2,13 @@ import Link from "next/link"
 
 interface Props {
   children: React.ReactNode,
-  href: string 
+  href: string ,
+  className?: string
 }
-export default function Button({children,href} :Props ){
+export default function Button({children,href,className} :Props ){
   return (
     <>
-      <Link href={href} className="btn">{children}</Link>
+      <Link href={href} className={` ${className} btn quicksand`}>{children}</Link>
     </>
   )
 }

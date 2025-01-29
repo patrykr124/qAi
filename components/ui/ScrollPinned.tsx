@@ -16,26 +16,20 @@ const slides = [
     {
         image: '/assets/img/cv.svg',
         title: 'CV to Blind',
-        description:"Artificial intelligence-based recruitment platforms eliminate biases during the selection process by hiding personal information about candidates, such as gender, age or background.\n\nThe solution promotes transparency and equality by focusing solely on competencies and experience.\n\nAutomating the analysis of resumes speeds up recruitment, reducing costs and minimizing the risk of subjective evaluations. This cutting-edge tool improves the quality of decisions and supports building diverse teams.",
+        description: "Artificial intelligence-based recruitment platforms eliminate biases during the selection process by hiding personal information about candidates, such as gender, age or background.\n\nThe solution promotes transparency and equality by focusing solely on competencies and experience.\n\nAutomating the analysis of resumes speeds up recruitment, reducing costs and minimizing the risk of subjective evaluations. This cutting-edge tool improves the quality of decisions and supports building diverse teams.",
     },
     {
-        image: '/assets/img/medicine.png',
+        image: '/assets/img/med.png',
         title: 'Ai in medicine',
         description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
     },
     {
-        image: '/assets/img/automation1.png',
-        title: 'Automations',
-        description: 'Process automation platforms use artificial intelligence to analyze data, speeding up and simplifying everyday business tasks.\n\nIn the areas of recruitment, logistics or marketing, these solutions reduce operational costs and eliminate repetitive activities.\n\nThanks to advanced algorithms, users are provided with tools to make accurate predictions, streamline decisions and optimize operational processes.',
-    },
-    
-    {
-        image: '/assets/img/4.png',
+        image: '/assets/img/4.jpg',
         title: 'Transcription Ai',
         description: 'Intelligent transcription tools enable fast and accurate conversion of speech into text.\n\nThey support legal, education and media in record analysis processes, facilitating documentation and access to information.\n\nBy automating transcription, costs and time consumption are reduced, allowing organizations to manage data and complete key tasks more efficiently.',
     },
     {
-        image: '/assets/img/brain.png',
+        image: '/assets/img/brain.jpg',
         title: 'Brain scan',
         description: 'AI solutions for medical diagnostics improve the analysis of imaging data, speeding up the process of detecting neurological conditions and other disorders.\n\nAdvanced algorithms that learn from large data sets improve the accuracy of diagnoses and support the work of doctors.\n\nWith automation and precision, these platforms enable faster decision-making and better patient care.',
     },
@@ -47,14 +41,14 @@ const slides = [
     {
         image: '/assets/img/ivr.png',
         title: 'IVR Voice Assistant',
-        description:"Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
+        description: "Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
     },
     {
-        image: '/assets/img/reader.svg',
+        image: '/assets/img/reader.jpg',
         title: 'Ship Spec Reader',
-        description:"Automatic technical specification reading systems streamline document analysis in logistics and maritime industries.\n\nUsing artificial intelligence, they speed up data processing, eliminating human error and reducing time-consuming manual processes.\n\nThe solution integrates with existing systems, providing precise extraction of key information and supporting optimization of document management. This allows for more effective decision-making and improved operational efficiency.",
+        description: "Automatic technical specification reading systems streamline document analysis in logistics and maritime industries.\n\nUsing artificial intelligence, they speed up data processing, eliminating human error and reducing time-consuming manual processes.\n\nThe solution integrates with existing systems, providing precise extraction of key information and supporting optimization of document management. This allows for more effective decision-making and improved operational efficiency.",
     },
-    
+
 
 
 ]
@@ -125,8 +119,8 @@ export default function ScrollPinned() {
 
 
     return (
-        <section id="scrollPinned"  ref={galleryRef} className="min-h-screen -mt-[85vh]  ">
-            <div  className="gallery flex ">
+        <section id="scrollPinned" ref={galleryRef} className="min-h-screen -mt-[85vh]  ">
+            <div className="gallery hidden md:flex ">
                 {/* Left scrolling section */}
                 <div className="left w-1/2 ml-auto">
                     {slides.map((slide, index) => (
@@ -158,7 +152,7 @@ export default function ScrollPinned() {
                                 className={`content-block absolute max-w-2xl space-y-6`}
                             >
                                 <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
-                                <p className="text-lg text-gray-300 whitespace-pre-line">{slide.description}</p>
+                                <p className="text-lg quicksand whitespace-pre-line">{slide.description}</p>
 
                             </div>
 
@@ -166,6 +160,22 @@ export default function ScrollPinned() {
                         <Dots active={active} scrollToSlide={scrollToSlide} slides={slides} />
                     </div>
                 </div>
+            </div>
+            <div className="md:hidden flex flex-col gap-10">
+                {slides.map((slide, index) => (
+                    <div key={index} className="flex flex-col gap-10">
+                        <div className="relative w-full h-[300px]">
+                            <Image src={slide.image} sizes="(max-width: 768px) 100vw, 50vw" fill alt={slide.title} className="top object-cover" />
+                        </div>
+                        <div className="wrapper">
+                            <div className="space-y-2">
+                                <h2 className="bottom">{slide.title}</h2>
+                                <p className="bottom">{slide.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+
             </div>
 
 

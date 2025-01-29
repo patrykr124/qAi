@@ -52,10 +52,10 @@ export default function WhatWeDoBox({ video, title, classShadow, titleClass, typ
                 <source src={`/assets/video/${video}`} type="video/mp4" />
             </video>
             <div className={`absolute z-20 ${titleClass}`}>
-                <h3 className={`${hoverTyping ? '' : 'text-4xl'} h3title opacity-0 font-extralight transition-all duration-250`}>{title}</h3>
+                <h3 className={`${hoverTyping ? '' : 'text-4xl'}  h3title opacity-0 font-extralight transition-all duration-250`}>{title}</h3>
                 <TypingText hoverTyping={hoverTyping}>{typingText}</TypingText>
             </div>
-            <div className={`absolute top-0 left-0 w-full h-full ${classShadow} z-10`}></div>
+            <div className={`absolute top-0 left-0 w-full h-full ${classShadow}  z-10`}></div>
         </div>
     )
 }

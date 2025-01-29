@@ -48,7 +48,7 @@ export default function TypingText({ children,hoverTyping }: Props) {
 
     return (
         <div>
-            <p ref={textRef} className="text-white mt-4 max-w-md">{children}</p>
+            <p ref={textRef} className=" mt-4 max-w-md">{children}</p>
         </div>
     )
 }

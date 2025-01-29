@@ -26,10 +26,53 @@ body {
   font-weight: 200;
 }
 
+p, .quicksand{
+  font-family: Quicksand, Helvetica, sans-serif;
+
+}
+
+
+
 
 .formula{
   font-family:var(--font-Azeret)
 }
+
+
+.btn {
+  font-size: 16px;
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5em 1.2em;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+
+
+.btn:hover::before {
+  width: 100%;
+  
+}
+
+
+
+
 
 
 @layer base {
@@ -39,10 +82,6 @@ body {
   }
 
 
-  /* .btn{
-    @apply text-xl bg-white text-black px-6 py-1 rounded-lg font-medium
-  }
-   */
   h2{
     @apply text-4xl font-bold text-white
   }
@@ -57,12 +96,6 @@ body {
   }
  
 
-
-
-  p{
-    @apply text-white/60 text-base
-  }
-
   b{
     @apply font-bold
   }
@@ -74,62 +107,6 @@ body {
     @apply bg-gray-box/35 rounded-lg  p-4 w-full max-h-[240px] space-y-4 justify-center flex flex-col
   }
 }
-
-
-
-
-
-.btn {
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  padding: 0.5em 1.2em;
-  color: white;
-  text-transform: uppercase;
-  position: relative;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-.btn:hover {
-  color:black;
- transition-delay: 0.5s;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: white;
-  transition: 0.5s ease;
-}
-
-
-
-.btn:hover::before {
-  width: 100%;
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  background-color: white;
-  transition: 0.4s ease;
-  z-index: -1;
-}
-
-.btn:hover::after {
-  height: 100%;
-  transition-delay: 0.4s;
-
-}
-
 
 
 

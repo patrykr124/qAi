@@ -6,12 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Button from "../Button";
+import HamburgerMenu from "../HamburgerMenu";
+import { useMenu } from "@/context/MenuContext";
 gsap.registerPlugin(ScrollTrigger);
 export default function NavBar() {
     const [visible, setVisible] = useState(true);
     const [lastScroll, setLastScroll] = useState(0);
     const navRef = useRef(null);
     const navWrappRef = useRef<HTMLDivElement>(null);
+    const {isOpen, setIsOpen,toggleMenu,handleCloseMenu} = useMenu();
 
 
     useEffect(() => {
@@ -22,12 +25,13 @@ export default function NavBar() {
                     if (currenScrollY === 0) {
                         setVisible(true);
                         navWrappRef.current.classList.remove("floating-nav");
+                      
                     } else if (currenScrollY > lastScroll) {
                         setVisible(false);
+                        if(isOpen)handleCloseMenu()
                     } else if (currenScrollY < lastScroll) {
                         navWrappRef.current.classList.add("floating-nav");
                         setVisible(true);
-
 
                     }
                     setLastScroll(currenScrollY);
@@ -42,7 +46,7 @@ export default function NavBar() {
         }
 
 
-    }, [lastScroll]);
+    }, [lastScroll,isOpen,handleCloseMenu]);
 
 
     useGSAP(() => {
@@ -78,21 +82,24 @@ export default function NavBar() {
 
                         </div>
                     </div>
-                    <div className="items_Left">
+                    <div className="items_Left md:flex hidden">
                         <ul className="flex  gap-6 text-md  ">
                             <li>
                                 <Button href="/">What we do</Button>
                             </li>
                             <li>
-                                <Button href="/">multiagentAI</Button>
+                                <Button href="/">MultiagentAI</Button>
                             </li>
                             <li>
                                 <Button href="/">NeuralHub</Button>
                             </li>
                         </ul>
                     </div>
-                    <div className="items_right flex justify-center items-center ">
+                    <div className="items_right md:flex hidden justify-center items-center ">
                         <Button href={"/contact"}>Contact us</Button>
+                    </div>
+                    <div className="block md:hidden">
+                        <HamburgerMenu />
                     </div>
                 </div>
             </div>

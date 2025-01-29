@@ -11,6 +11,7 @@ export default function WhatWeDo() {
             opacity: 1,
             duration: 0.6,
             ease: "power1.inOut",
+            y: 0,
             stagger: 0.5,
             scrollTrigger: {
                 trigger: ".box",
@@ -23,7 +24,8 @@ export default function WhatWeDo() {
                 y: 100,
 
             }
-            )
+            ),
+        
         gsap.to(".h3title", {
             opacity: 1,
             y: 0,
@@ -65,22 +67,22 @@ export default function WhatWeDo() {
     return (
         <div id="whatwedo">
             <div className="wrapper">
-                <div className="grid md:grid-cols-3 md:gap-10 pt-52">
-                    <div className="col-span-2 box opacity-0">
+                <div className="md:grid md:grid-cols-3 flex flex-col gap-20 md:gap-10 pt-36 md:pt-52">
+                    <div className="col-span-2 box translate-y-20  opacity-0">
                         <WhatWeDoBox typingText={contentData[0].typingText} video="multiagentai.mp4" titleClass="top-20 left-4"  title="MultiAgent AI" classShadow="bg-gradient-to-tr from-black from-1%  via-transparent via-40%" />
                     </div>
-                    <div className="col-span-1 box opacity-0">
+                    <div className="col-span-1 box translate-y-20 opacity-0 mb-20 md:mb-0">
                         <WhatWeDoBox typingText={contentData[1].typingText} video="gpu1.mov" titleClass="top-4 left-2" title="GPU" classShadow="bg-gradient-to-br from-black from-1%  via-transparent via-50%" />
                     </div>
                 </div>
 
 
-                <div className="grid md:grid-cols-3 md:gap-10 md:pt-10 ">
+                <div className="md:grid md:grid-cols-3 flex flex-col  gap-20 md:gap-10  md:pt-10 ">
 
-                    <div className="col-span-1 box opacity-0">
-                        <WhatWeDoBox typingText={contentData[2].typingText} video="on.mov" titleClass="top-20 left-4" title="On-premise" classShadow="bg-gradient-to-tr from-black from-1%  via-transparent via-10%" />
+                    <div className="col-span-1 box translate-y-20 opacity-0">
+                        <WhatWeDoBox typingText={contentData[2].typingText} video="on.mp4" titleClass="top-20 left-4" title="On-premise" classShadow="bg-gradient-to-tr from-black from-1%  via-transparent via-10%" />
                     </div>
-                    <div className="col-span-2 box opacity-0">
+                    <div className="col-span-2 box translate-y-20 opacity-0">
                         <WhatWeDoBox typingText={contentData[3].typingText} video="neuralhub.mov" titleClass="top-4 left-2 w-3/4" title="NeuralHub" classShadow="bg-gradient-to-br from-black from-15%  via-transparent via-60%" />
                     </div>
 

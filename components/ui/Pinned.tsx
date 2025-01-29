@@ -66,7 +66,7 @@ export default function Pinned() {
 
 
     return (
-        <div className="fixed top-1/2 -translate-y-1/2 lg:left-1 xl:left-[2%] z-[999999999]">
+        <div className="fixed top-1/2 -translate-y-1/2 left-0.5 lg:left-1 xl:left-[2%] z-[999999999]">
             <div className="flex flex-col gap-4">
                 {
                     hrefData.map((item, index) => {

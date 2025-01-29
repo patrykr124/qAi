@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         'gray-box':'#666666',
+        'gray-text':'#D9D9D9',
       },
       fontFamily: {
         Azeret: ["var(--font-Azeret)"],

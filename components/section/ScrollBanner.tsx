@@ -51,7 +51,7 @@ export default function ScrollBanner() {
     return (
         <div id="scrollBanner" className="h-screen relative overflow-hidden">
             <div className="wrapper">
-                <div className="absolute w-[300%] h-[400%] bottom-[0%] right-[-24%] bg-shadow-radial z-10"></div>
+                <div className="absolute w-[300%] h-[400%] -bottom-[40%] md:bottom-[0%] right-[-24%] bg-shadow-radial z-10"></div>
                 {/* <div className="absolute w-[50%] h-[45%] inset-0 bg-shadow-top-huge z-10"></div> */}
                 <div className=" absolute mt-28 space-y-6  max-w-screen-md h-[80%] inset-y-0 z-20">
                     <h2>Efficient AI Collaboration for Cybersecurity Optimization
@@ -59,7 +59,7 @@ export default function ScrollBanner() {
                     <p>All of the platforms described have in common the use of advanced technologies, including artificial intelligence, to solve complex problems in various industries such as medicine, education, diagnostics or prosthetics.<br></br><br></br>They focus on innovation, accessibility and supporting users by providing tools tailored to their specific needs. Each of these companies operates in the spirits of technological transformation, with an emphasis on improving quality of life, increasing process efficiency and customer data security</p>
 
                 </div>
-                <div className="">
+                <div className="flex flex-col gap-2">
                     <div className="flex gap-2 scroll-image justify-center ">
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/1.svg" alt="bg" width={300} height={300} />
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/2.svg" alt="bg" width={300} height={300} />

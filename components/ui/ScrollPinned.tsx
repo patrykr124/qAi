@@ -9,17 +9,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const slides = [
     {
-        image: '/assets/img/gpu.png',
+        image: '/assets/img/gpu1.png',
         title: 'GPU',
         description: 'GPU Clouds are scalable computing platforms that offer on-demand resources for advanced data processing.\n\nThey streamline AI projects, enabling rapid training of models and deployment of solutions without the need to invest in costly infrastructure.\n\nBy integrating with popular tools, they provide efficiency and flexibility, allowing organizations to optimize processes and accelerate technology projects.',
     },
     {
         image: '/assets/img/cv.svg',
-        title: 'CV to Blind',
+        title: 'DocScrapper AI',
         description: "Artificial intelligence-based recruitment platforms eliminate biases during the selection process by hiding personal information about candidates, such as gender, age or background.\n\nThe solution promotes transparency and equality by focusing solely on competencies and experience.\n\nAutomating the analysis of resumes speeds up recruitment, reducing costs and minimizing the risk of subjective evaluations. This cutting-edge tool improves the quality of decisions and supports building diverse teams.",
     },
     {
-        image: '/assets/img/med.png',
+        image: '/assets/img/med1.png',
         title: 'Ai in medicine',
         description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
     },
@@ -39,17 +39,10 @@ const slides = [
         description: 'Mobility and rehabilitation support technologies use advanced AI solutions to design medical devices such as prostheses and exoskeletons.\n\nThey offer a modern approach to improving patients quality of life, enabling them to be more independent and better able to adapt to daily challenges.\n\nInnovative systems support the rehabilitation process, combining personalization with efficiency.',
     },
     {
-        image: '/assets/img/ivr.png',
+        image: '/assets/img/ivr1.png',
         title: 'IVR Voice Assistant',
         description: "Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
     },
-    {
-        image: '/assets/img/reader.jpg',
-        title: 'Ship Spec Reader',
-        description: "Automatic technical specification reading systems streamline document analysis in logistics and maritime industries.\n\nUsing artificial intelligence, they speed up data processing, eliminating human error and reducing time-consuming manual processes.\n\nThe solution integrates with existing systems, providing precise extraction of key information and supporting optimization of document management. This allows for more effective decision-making and improved operational efficiency.",
-    },
-
-
 
 ]
 
@@ -127,14 +120,14 @@ export default function ScrollPinned() {
                         <div
                             key={index}
                             id={`${index}`}
-                            className="photo-container h-screen flex items-center justify-end p-8"
+                            className="photo-container h-screen flex items-center justify-end "
                         >
                             <div className="relative overflow-hidden rounded-lg w-[700px] h-[500px] ">
                                 <Image
                                     src={slide.image}
                                     alt={slide.title}
                                     fill
-                                    className="photo object-cover rounded-lg"
+                                    className="photo object-contain rounded-lg"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     priority={index === 0}
                                 />
@@ -157,7 +150,7 @@ export default function ScrollPinned() {
                             </div>
 
                         ))}
-                        <Dots active={active} scrollToSlide={scrollToSlide} slides={slides} />
+                        {/* <Dots active={active} scrollToSlide={scrollToSlide} slides={slides} /> */}
                     </div>
                 </div>
             </div>

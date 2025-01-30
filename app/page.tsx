@@ -1,4 +1,5 @@
 
+import Footer from "@/components/section/Footer/Footer";
 import PercelBox from "@/components/section/PercelBox";
 import ScrollBanner from "@/components/section/ScrollBanner";
 import WhatWeDo from "@/components/section/WhatWeDo";
@@ -21,6 +22,7 @@ export default function Home() {
         <ScrollPinned />
         <ScrollBanner />
         <PercelBox />
+        <Footer/>
       </div>
     </MenuProvider>
   );

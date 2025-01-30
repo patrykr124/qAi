@@ -16,7 +16,7 @@ const slides = [
     {
         image: '/assets/img/cv.svg',
         title: 'DocScrapper AI',
-        description: "Artificial intelligence-based recruitment platforms eliminate biases during the selection process by hiding personal information about candidates, such as gender, age or background.\n\nThe solution promotes transparency and equality by focusing solely on competencies and experience.\n\nAutomating the analysis of resumes speeds up recruitment, reducing costs and minimizing the risk of subjective evaluations. This cutting-edge tool improves the quality of decisions and supports building diverse teams.",
+        description: "An intelligent document processing tool that automatically extracts key information and anonymises sensitive data.\n\nEnables regulatory compliance (e.g. RODO), extraction of content from reports and contracts and automatic classification of documents.\n\nIt streamlines data management in finance, administration and cyber security, eliminating human error and speeding up processes.",
     },
     {
         image: '/assets/img/med1.png',
@@ -24,17 +24,17 @@ const slides = [
         description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
     },
     {
-        image: '/assets/img/4.jpg',
+        image: '/assets/img/4a.png',
         title: 'Transcription Ai',
         description: 'Intelligent transcription tools enable fast and accurate conversion of speech into text.\n\nThey support legal, education and media in record analysis processes, facilitating documentation and access to information.\n\nBy automating transcription, costs and time consumption are reduced, allowing organizations to manage data and complete key tasks more efficiently.',
     },
     {
-        image: '/assets/img/brain.jpg',
+        image: '/assets/img/scan.png',
         title: 'Brain scan',
         description: 'AI solutions for medical diagnostics improve the analysis of imaging data, speeding up the process of detecting neurological conditions and other disorders.\n\nAdvanced algorithms that learn from large data sets improve the accuracy of diagnoses and support the work of doctors.\n\nWith automation and precision, these platforms enable faster decision-making and better patient care.',
     },
     {
-        image: '/assets/img/6.png',
+        image: '/assets/img/6i.png',
         title: 'Innovative prostheses',
         description: 'Mobility and rehabilitation support technologies use advanced AI solutions to design medical devices such as prostheses and exoskeletons.\n\nThey offer a modern approach to improving patients quality of life, enabling them to be more independent and better able to adapt to daily challenges.\n\nInnovative systems support the rehabilitation process, combining personalization with efficiency.',
     },

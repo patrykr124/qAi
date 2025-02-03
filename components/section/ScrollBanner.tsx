@@ -17,9 +17,9 @@ export default function ScrollBanner() {
         gsap.to(imagesBox, {
             scrollTrigger: {
                 trigger: ".scroll-image",
-                start: "-100% center", // Punkt początkowy animacji
-                end: "100% top", // Punkt końcowy animacji
-                scrub: 1, // Smooth scroll
+                start: "-100% center", 
+                end: "100% top", 
+                scrub: 1, 
             },
             x: -200,
             ease: "none",
@@ -28,9 +28,9 @@ export default function ScrollBanner() {
             gsap.to(imageBox1, {
                 scrollTrigger: {
                     trigger: ".scroll-image",
-                    start: "-100% center", // Punkt początkowy animacji
-                    end: "200% top", // Punkt końcowy animacji
-                    scrub: 2, // Smooth scroll
+                    start: "-100% center", 
+                    end: "200% top", 
+                    scrub: 2, 
                 },
                 x: 200,
                 ease: "none",
@@ -39,9 +39,9 @@ export default function ScrollBanner() {
             gsap.to(imageBox2, {
                 scrollTrigger: {
                     trigger: ".scroll-image",
-                    start: "-100% center", // Punkt początkowy animacji
-                    end: "300% top", // Punkt końcowy animacji
-                    scrub: 1, // Smooth scroll
+                    start: "-100% center", 
+                    end: "300% top", 
+                    scrub: 1, 
                 },
                 x: -300,
                 ease: "none",

@@ -13,14 +13,14 @@ export default function PercelBox() {
                             <h2 className="font-thin text-5xl mr-20 uppercase">Frequently</h2>
                         </div>
                         <div className="flex justify-center items-center">
-                            <h2 className="font-thin text-5xl ml-8 uppercase">Asked</h2>
+                            <h2 className="font-thin text-5xl ml-5 -mb-1 uppercase">Asked</h2>
                         </div>
                         <div className="flex justify-center">
                             <h2 className=" text-7xl">Questions</h2>
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                        <Image src="/assets/img/logo.svg" alt="" width={500} height={500} />
+                        <Image src="/assets/img/logo.svg" alt="" width={420} height={420} />
                     </div>
                 </div>
                 <div className="left md:w-3/4 flex gap-8 md:gap-0 flex-row  justify-center">

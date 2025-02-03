@@ -77,7 +77,7 @@ export default function ScrollBanner() {
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/12.svg" alt="bg" width={300} height={300} />
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/11.svg" alt="bg" width={300} height={300} />
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/9.svg" alt="bg" width={300} height={300} />
-                        <Image className="rounded-lg object-cover" src="/assets/img/banner/10.svg" alt="bg" width={300} height={300} />
+                        <Image className="rounded-lg object-cover" src="/assets/img/banner/17.png" alt="bg" width={300} height={300} />
                         <Image className="rounded-lg object-cover" src="/assets/img/banner/9.svg" alt="bg" width={300} height={300} />
                     </div>
                     <div className="flex gap-2 justify-center scroll-image2 ">

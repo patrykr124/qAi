@@ -10,17 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 const slides = [
     {
         image: '/assets/img/gpu1.png',
-        title: 'GPU',
+        title: 'GPU MeshCloud',
         description: 'GPU Clouds are scalable computing platforms that offer on-demand resources for advanced data processing.\n\nThey streamline AI projects, enabling rapid training of models and deployment of solutions without the need to invest in costly infrastructure.\n\nBy integrating with popular tools, they provide efficiency and flexibility, allowing organizations to optimize processes and accelerate technology projects.',
     },
     {
-        image: '/assets/img/cv.png',
+        image: '/assets/img/paper.png',
         title: 'DocScrapper AI',
-        description: "An intelligent document processing tool that automatically extracts key information and anonymises sensitive data.\n\nEnables regulatory compliance (e.g. RODO), extraction of content from reports and contracts and automatic classification of documents.\n\nIt streamlines data management in finance, administration and cyber security, eliminating human error and speeding up processes.",
+        description: "An intelligent document processing tool that automatically extracts key information and anonymises sensitive data.\n\nEnables regulatory compliance, extraction of content from reports and contracts and automatic classification of documents.\n\nIt streamlines data management in finance, administration and cyber security, eliminating human error and speeding up processes.",
     },
     {
         image: '/assets/img/medi.png',
-        title: 'Ai in medicine',
+        title: 'Lion AI',
         description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
     },
     {
@@ -29,13 +29,13 @@ const slides = [
         description: 'Intelligent transcription tools enable fast and accurate conversion of speech into text.\n\nThey support legal, education and media in record analysis processes, facilitating documentation and access to information.\n\nBy automating transcription, costs and time consumption are reduced, allowing organizations to manage data and complete key tasks more efficiently.',
     },
     {
-        image: '/assets/img/paper.png',
-        title: 'MediScan AI',
+        image: '/assets/img/scan.png',
+        title: 'BrainScan AI',
         description: ' AI platforms in medical diagnostics support the analysis of scans of the entire body and major organs, with a particular focus on the brain. Advanced algorithms that learn from large data sets improve the accuracy of diagnoses, enabling the detection of neurological disorders and other conditions. Automated processes speed up decision-making, providing more accurate diagnosis and more effective patient care.',
     },
     {
         image: '/assets/img/cyborg.png',
-        title: 'CyberLimb',
+        title: 'NeuralExt',
         description: 'Mobility and rehabilitation support technologies use advanced AI solutions to design medical devices such as prostheses and exoskeletons.\n\nThey offer a modern approach to improving patients quality of life, enabling them to be more independent and better able to adapt to daily challenges.\n\nInnovative systems support the rehabilitation process, combining personalization with efficiency.',
     },
     {
@@ -127,7 +127,7 @@ export default function ScrollPinned() {
                                     src={slide.image}
                                     alt={slide.title}
                                     fill
-                                    className="photo object-contain rounded-lg"
+                                    className="photo object-cover rounded-lg"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     priority={index === 0}
                                 />

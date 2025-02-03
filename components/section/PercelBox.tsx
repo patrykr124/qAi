@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+import SvgLogo from "../ui/SvgLogo";
 
 export default function PercelBox() {
 
@@ -19,8 +20,9 @@ export default function PercelBox() {
                             <h2 className=" text-7xl">Questions</h2>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <Image src="/assets/img/logo.svg" alt="" width={420} height={420} />
+                    <div className="flex items-center justify-center z-50 relative w-[420px] mx-auto">
+                        {/* <Image src="/assets/img/logo.svg" alt="" width={420} height={420} /> */}
+                        <SvgLogo/>
                     </div>
                 </div>
                 <div className="left md:w-3/4 flex gap-8 md:gap-0 flex-row  justify-center">
@@ -28,7 +30,7 @@ export default function PercelBox() {
                         <div className="w-1/2">
                             <Accordion type="single" collapsible>
                                 <AccordionItem value="item-1">
-                                    <AccordionTrigger>Can AI reduce employee costs in my company?</AccordionTrigger>
+                                    <AccordionTrigger>Can, and how can AI reduce employee costs in my company?</AccordionTrigger>
                                     <AccordionContent>
                                         Yes, implementing AI can automate repetitive tasks, optimising processes and increasing productivity. AI systems do not replace employees, but allow them to focus on more strategic tasks.
                                     </AccordionContent>

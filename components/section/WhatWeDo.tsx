@@ -67,7 +67,7 @@ export default function WhatWeDo() {
     return (
         <div id="whatwedo">
             <div className="wrapper">
-                <div className="md:grid md:grid-cols-3 flex flex-col gap-20 md:gap-10 pt-36 md:pt-52">
+                <div className="md:grid md:grid-cols-3 flex flex-col gap-20 md:gap-10 pt-36 md:pt-42">
                     <div className="col-span-2 box translate-y-20  opacity-0">
                         <WhatWeDoBox typingText={contentData[0].typingText} video="multiagentai.mp4" titleClass="top-20 left-4"  title="MultiAgent AI" classShadow="bg-gradient-to-tr from-black from-1%  via-transparent via-40%" />
                     </div>

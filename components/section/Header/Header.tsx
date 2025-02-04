@@ -1,3 +1,4 @@
+import GlitchAnimation from "@/components/ui/GlitchAnimation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -26,7 +27,7 @@ export default function Header() {
                             <h1 className="word text-6xl sm:text-[144px] text-white">THE</h1> <br />
                         </div>
                         <div className="overflow-hidden">
-                            <h1 className="word text-7xl sm:text-[144px]  font-medium text-white">FUTURE</h1>
+                            <GlitchAnimation />
                         </div>
                     </h1>
                 </div>

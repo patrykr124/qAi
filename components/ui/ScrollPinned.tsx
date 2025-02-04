@@ -21,7 +21,7 @@ const slides = [
     {
         image: '/assets/img/medi.png',
         title: 'Lion AI',
-        description: 'Open-source AI platforms support technology development in medicine and research by providing tools for analyzing imaging and diagnostic data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations to improve the quality of services and use resources more efficiently.',
+        description: 'Open-source AI platforms support technology development in medicine, research, industry, and the public sector by providing tools for analyzing imaging, diagnostic, and operational data.\n\nThese systems enable effective integration with existing processes, offering scalable solutions tailored to individual needs.\n\nThe innovative approach allows medical organizations, industrial operations, and public institutions to improve the quality of services, optimize processes, and use resources more efficiently.',
     },
     {
         image: '/assets/img/transc.png',
@@ -31,17 +31,22 @@ const slides = [
     {
         image: '/assets/img/scan.png',
         title: 'BrainScan AI',
-        description: ' AI platforms in medical diagnostics support the analysis of scans of the entire body and major organs, with a particular focus on the brain. Advanced algorithms that learn from large data sets improve the accuracy of diagnoses, enabling the detection of neurological disorders and other conditions. Automated processes speed up decision-making, providing more accurate diagnosis and more effective patient care.',
+        description: ' AI platforms in medical diagnostics support the analysis of scans of the entire body and major organs, with a particular focus on the brain.\n\nAdvanced algorithms that learn from large data sets improve the accuracy of diagnoses, enabling the detection of neurological disorders and other conditions.\n\nAutomated processes speed up decision-making, providing more accurate diagnosis and more effective patient care.',
     },
     {
         image: '/assets/img/cyborg.png',
         title: 'NeuralExt',
-        description: 'Mobility and rehabilitation support technologies use advanced AI solutions to design medical devices such as prostheses and exoskeletons.\n\nThey offer a modern approach to improving patients quality of life, enabling them to be more independent and better able to adapt to daily challenges.\n\nInnovative systems support the rehabilitation process, combining personalization with efficiency.',
+        description: 'Mobility and rehabilitation technologies use advanced AI solutions to design medical devices such as prostheses, exoskeletons and bionic implants.\n\nThey offer a cutting-edge approach to improving patients quality of life, enabling greater independence, dexterity and adaptation to daily challenges.\n\nBionic applications support lost or impaired functions, creating a new quality in rehabilitation and therapy.\n\nInnovative systems combine personalization with efficiency, improving the comfort and effectiveness of treatment.',
     },
     {
         image: '/assets/img/ivr1.png',
         title: 'IVR Voice Assistant',
         description: "Advanced voice systems that automatically handle customer inquiries, especially in the medical industry and services that require quick access to information.\n\nThey facilitate appointments, provide details about available services or business hours, eliminating the need to wait for a consultant to call.\n\nWith personalized messages and integration with CRM systems, they provide efficient service and a positive user experience. The solution allows organizations to save time, improve customer service and tailor operations to the specific needs of the industry.",
+    },
+    {
+        image: '/assets/img/beacon1.png',
+        title: 'Beacon MS',
+        description: "An advanced microlocation system based on Bluetooth beacon technology that enables precise positioning of users in confined spaces such as airports, shopping malls and hospitals.\n\nWith offline operation, personalized messages and integration with mobile applications, Beacon MS facilitates navigation, improves accessibility and supports the efficiency of large-scale facility management by providing modern location solutions.",
     },
 
 ]

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function GlitchAnimation() {
     const [currentWorld, setCurrentWorld] = useState(0);
     const [isGlitching, setIsGlitching] = useState(false);
-    const words = ['FUTURE', 'QUITE', 'QUANTUM',"QUERY"];
+    const words = ['FUTURE', 'QUANTUM', 'QUERY',"QUALITY","QUANTIFY","QUARK","QUORUM","QUICK","QUADRANT","QUASI","QUANTIZAION","QUERYABLE","QUALIFICATION"];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -11,7 +11,7 @@ export default function GlitchAnimation() {
             setTimeout(() => {
                 setCurrentWorld(current => (current + 1) % words.length)
                 setIsGlitching(false)
-            }, 80)
+            }, 120)
         },4000)
         return () => clearInterval(interval)
     }, [])

@@ -26,7 +26,7 @@ export default function Header() {
                         <div className="overflow-hidden">
                             <h1 className="word text-6xl sm:text-[144px] text-white">THE</h1> <br />
                         </div>
-                        <div className="overflow-hidden">
+                        <div className="">
                             <GlitchAnimation />
                         </div>
                     </h1>

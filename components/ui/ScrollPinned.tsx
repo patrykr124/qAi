@@ -45,7 +45,7 @@ const slides = [
     },
     {
         image: '/assets/img/beacon1.png',
-        title: 'Beacon MS',
+        title: 'BeaconMesh',
         description: "An advanced microlocation system based on Bluetooth beacon technology that enables precise positioning of users in confined spaces such as airports, shopping malls and hospitals.\n\nWith offline operation, personalized messages and integration with mobile applications, Beacon MS facilitates navigation, improves accessibility and supports the efficiency of large-scale facility management by providing modern location solutions.",
     },
 

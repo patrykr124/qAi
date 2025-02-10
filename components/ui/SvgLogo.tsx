@@ -175,7 +175,7 @@ export default function SvgLogo() {
 .st165:hover,
 .st166:hover,
 .st167:hover {
-  fill: #A78ACE;
+  fill: #2b0646;
   cursor: pointer;
 }
 

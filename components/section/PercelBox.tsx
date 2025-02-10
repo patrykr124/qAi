@@ -19,14 +19,14 @@ export default function PercelBox() {
                             <h2 className=" text-7xl">Questions</h2>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center z-50 relative w-[420px] mx-auto">
+                    <div className="flex items-center justify-center z-50 relative w-[200px] md:w-[420px] mx-auto">
                         {/* <Image src="/assets/img/logo.svg" alt="" width={420} height={420} /> */}
                         <SvgLogo />
                     </div>
                 </div>
                 <div className="left md:w-3/4 flex gap-8 md:gap-0 flex-row  justify-center">
-                    <div className="w-full flex gap-8 justify-center items-center">
-                        <div className="w-1/2">
+                    <div className="w-full flex flex-col md:flex-row gap-8 justify-center items-center">
+                        <div className="md:w-1/2">
                             <Accordion type="single" collapsible>
                                 <AccordionItem value="item-1">
                                     <AccordionTrigger>Can, and how can AI reduce employee costs in my company?</AccordionTrigger>
@@ -67,7 +67,7 @@ export default function PercelBox() {
                             </Accordion>
 
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2">
                             <Accordion type="single" collapsible>
                                 <AccordionItem value="item-7">
                                     <AccordionTrigger>What industries can benefit from the AI solutions available from Q-AI?</AccordionTrigger>

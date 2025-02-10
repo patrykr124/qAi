@@ -18,7 +18,7 @@ export default function GlitchAnimation() {
                     setTimeout(() => {
                         setIsGlitching(false)
                         setIsWord('FUTURE')
-                    }, 100)
+                    }, 50)
 
                 }, 40)
                 return nextIndex;

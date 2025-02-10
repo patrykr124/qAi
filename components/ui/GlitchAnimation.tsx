@@ -12,25 +12,27 @@ export default function GlitchAnimation() {
             setCurrentWorld((prev) => {
                 const nextIndex = (prev + 1) % words.length;
                 setIsWord(words[nextIndex]);
-                setIsGlitching(true)
-                timeoutRef.current = setTimeout(() => {
-                    setIsGlitching(false)
-                    setIsWord('FUTURE')
-                }, 150)
 
+                timeoutRef.current = setTimeout(() => {
+                    setIsGlitching(true)
+                    setTimeout(() => {
+                        setIsGlitching(false)
+                        setIsWord('FUTURE')
+                    }, 100)
+
+                }, 40)
                 return nextIndex;
             })
-        }, 2000)
+        }, 4000)
         return () => {
             clearInterval(interval)
-            if(timeoutRef.current) {
+            if (timeoutRef.current) {
                 clearTimeout(timeoutRef.current)
             }
         }
-        
     }, [])
 
     return (
-        <h1 className={`${isGlitching ? ' glitch ' : ' '} word text-7xl sm:text-[144px]  font-medium text-white`}>{isWord}</h1>
+        <h1 className={`${isGlitching ? ' interference ' : ' '} word text-7xl sm:text-[144px]  font-medium text-white`}>{isWord}</h1>
     )
 }

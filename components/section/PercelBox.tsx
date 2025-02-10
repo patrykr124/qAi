@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import SvgLogo from "../ui/SvgLogo";
 
@@ -22,7 +21,7 @@ export default function PercelBox() {
                     </div>
                     <div className="flex items-center justify-center z-50 relative w-[420px] mx-auto">
                         {/* <Image src="/assets/img/logo.svg" alt="" width={420} height={420} /> */}
-                        <SvgLogo/>
+                        <SvgLogo />
                     </div>
                 </div>
                 <div className="left md:w-3/4 flex gap-8 md:gap-0 flex-row  justify-center">
@@ -85,13 +84,13 @@ export default function PercelBox() {
                                 <AccordionItem value="item-9">
                                     <AccordionTrigger>How can AI help automate business processes?</AccordionTrigger>
                                     <AccordionContent>
-                                        Systemy AI analizują dane, przewidują trendy i automatyzują zadania w różnych branżach – od logistyki po marketing. Automatyzacja redukuje błędy, zwiększa efektywność i pozwala firmom szybciej reagować na zmiany rynkowe.
+                                        AI systems analyse data, predict trends and automate tasks across industries - from logistics to marketing. Automation reduces errors, increases efficiency and allows companies to react faster to market changes.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-10">
                                     <AccordionTrigger>Can an AI multiagent improve logistics in my company?</AccordionTrigger>
                                     <AccordionContent>
-                                        Tak, multiagent AI analizuje dane w czasie rzeczywistym, optymalizuje trasy dostaw, zarządza zapasami i przewiduje opóźnienia. Dzięki temu można zminimalizować koszty i zwiększyć efektywność operacyjną.
+                                        Yes, multiagent AI analyses real-time data, optimises delivery routes, manages inventory and predicts delays. This minimises costs and increases operational efficiency.
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-11">
